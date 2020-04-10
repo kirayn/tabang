@@ -1,0 +1,56 @@
+<div class="row col-12 forumBar">
+		<div class="forumBarBtn col-4" ng-click="gotoForum()">બધા પ્રશ્નો</div>	
+</div>
+
+<div class="col col-12" ng-repeat="query in queries">
+	<div class="advList">
+	<div class="advTitle">{{query.qTitle}}</div>
+	<div class="queryDetails">{{query.details}}</div>
+	<div class="usersname"><span class="usericon">{{query.firstName}} {{query.lastName}}</span>
+		<span class="dateicon" style="float:right;">{{query.date | date:'medium'}}</span></div>
+	<div class="queryBottomBar">Discussion</div>
+
+<div class="commentBox col-11" ng-repeat=" comment in comments">
+	{{comment.details}} <br/>
+	<span ng-if="comment.image != ''"><img ng-src="media/{{comment.image}}" width="90%"></span>
+	<div class="usersname"><span class="usericon"><b>{{comment.firstName}} {{comment.lastName}}</b></span>
+		<span class="dateicon" style="float">{{comment.date | date:'medium'}}</span>
+		<span class="closeBtn" ng-if="comment.userId == usermId" ng-click="delcomment(comment.commentId)">X</span>
+	</div>
+	
+</div>
+</div>
+</div>
+<div class="commentForm col-12">
+	<form name="commentForm">
+		<div class="form-group">
+			<textarea name="details" ng-model="details" ng-required="true" rows="5" class="" placeholder="ઉપરોક્ત પ્રશ્નની ચર્ચા કરવા માટે આપનો અભિપ્રાય અહીં લખો."></textarea> 
+		
+		<div class="col-sm-10 form-group">
+			<label>ફોટા સિલેક્ટ કરો.</label>
+			<input type='file' multiple ng-file="uploadfiles" class="form-control">
+		</div>
+
+		<div class="form-group">
+			<button type="submit" class="form-control" ng-click="commentForm.$valid && insertComment()">મોકલો</button>
+		</div>
+		</div>
+	</form>
+</div>
+
+<div class="modal fade" id="cnfModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+      </div>
+      <div class="modal-body">
+        {{modalmsg}}  
+      </div>
+      <div class="modal-footer">
+        <span type="button" class="btn btn-secondary" data-dismiss="modal" ng-click="delCmnt(itemId)">હા</span>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">ના</button>
+        
+      </div>
+    </div>
+  </div>
+</div>

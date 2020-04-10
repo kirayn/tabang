@@ -1,0 +1,64 @@
+<div class="col catColumn" ng-repeat="advert in adverts track by $index" style="text-align: left; font-size: 12px;">
+	<div class="advList">
+	<span class="advTitle">{{advert.title}} </span><br/>
+	{{advert.description}}<br/>
+	<b>અંદાજીત કિંમત :</b> {{advert.cost}} <br/>
+	<b>સ્થળ : </b> {{advert.ltitle}} <br/>
+	<b>સંપર્ક : </b> {{advert.contactPerson}} 
+	<a href="tel:{{advert.contactNumber}}"><img src="img/call-icon.png" height="30px" style="margin-right: 5px;">
+	<a href="//api.whatsapp.com/send?phone=+91{{advert.contactNumber}}&text=Contact from TABELO App"> 	
+		<img height="30px" src="img/whatsapp-icon.png"></a>
+	<div class="row" style="text-align: center; border-top: 1px solid gray">
+			<div class="col-6" style="float: right;"><img height="30px" src="img/like.png" ng-click="addLike($index, advert.advId, 'adv', 'like')"><span ng-bind="advert.likes"></span></div>
+			<div class="col-6" style="float: right;"><img height="30px" src="img/comments.png" ng-click="getDetails(advert.advId)"><span ng-bind="advert.comments"></span></div>
+		</div>
+	<div class="" ng-repeat="photo in media">
+		<img ng-src="media/{{photo.filename}}" style="width:100%">
+	</div>
+	<div class="commentBox col-11" ng-repeat=" comment in comments">
+	{{comment.details}} <br/>
+	<span ng-if="comment.image !=null"><img ng-src="media/{{comment.image}}" width="90%"></span>
+	<div class="usersname"><span class="usericon"><b>{{comment.firstName}} {{comment.lastName}}</b></span>
+		<span class="dateicon" style="float">{{comment.date | date:'medium'}}</span>
+		<span class="closeBtn" ng-if="comment.userId == usermId" ng-click="delcomment(comment.commentId)">X</span>
+	</div>
+</div>
+</div>
+
+
+
+</div>
+
+<div class="commentForm col-12">
+	<form name="commentForm">
+		<div class="form-group">
+			<textarea name="details" ng-model="details" ng-required="true" rows="5" class="" placeholder="ઉપરોક્ત પ્રશ્નની ચર્ચા કરવા માટે આપનો અભિપ્રાય અહીં લખો."></textarea>
+		
+		<div class="col-sm-10 form-group">
+			<label>ફોટા સિલેક્ટ કરો.</label>
+			<input type='file' multiple ng-file="uploadfiles" class="form-control">
+		</div>
+
+		<div class="form-group">
+			<button type="submit" class="form-control" ng-click="commentForm.$valid && insertComment()">મોકલો</button>
+		</div>
+		</div>
+	</form>
+</div>
+
+<div class="modal fade" id="cnfModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+      </div>
+      <div class="modal-body">
+        {{modalmsg}}  
+      </div>
+      <div class="modal-footer">
+        <span type="button" class="btn btn-secondary" data-dismiss="modal" ng-click="delCmnt(itemId)">હા</span>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">ના</button>
+        
+      </div>
+    </div>
+  </div>
+</div>

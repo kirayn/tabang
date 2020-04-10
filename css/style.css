@@ -1,0 +1,301 @@
+/* The side navigation menu */
+body{
+  
+}
+label{
+  margin-bottom: 0px;
+}
+textarea{
+  width: 100%;
+  border-radius: 5px;
+}
+
+#slides_control > div{
+  height: 200px;
+}
+
+#slides_control {
+  position:absolute;
+  width: 400px;
+  left:50%;
+  top:20px;
+ margin-left:-200px;
+}
+
+.btn {
+    display: inline-block;
+    font-weight: 400;
+    color: #fff;
+    text-align: center;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-color: darkcyan;
+    border: 1px solid gray;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: .25rem;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+.loader{
+    max-width: 400px;
+    margin: 0 15%;
+    display: none;
+}
+.loaderShow{
+    display: block;
+}
+.hide{
+  display: none;
+}
+.show{
+  display: block;
+}
+.waiting{
+  height: 100px;
+  width: 100px;
+  background-image: url(../img/progress.gif);
+  background-position: center;
+}
+.modal-content{
+  width: 96%;
+}
+.listImg{
+    object-fit: scale-down;
+    object-position: center;
+    width: 100%;
+    max-height: 200px;
+    margin-bottom: 1rem;
+}
+.usersname{
+  font-size: 12px;
+  color: blue;
+}
+.fixed-top {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+}
+.homeBtn{
+  margin-top: 8px;
+  margin-left: 37px;
+  width: 36px;
+}
+.forumBar{
+  border: 1px solid grey;
+  border-radius: 0;
+  padding: 5px 5px 5px 5px;
+  background-color: gray;
+  text-align: center;
+  margin: 0;
+}
+.closeBtn{
+  float: right;
+    font-size: 11px;
+    background: red;
+    color: white;
+    border-radius: 12px;
+    padding: 0 4px;
+}
+.usericon{
+  background-image: url("/img/profileicon.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  padding-left: 16px;
+}
+.dateicon{
+  background-image: url("/img/date.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  padding-left: 8%;
+  margin-left: 8px;
+}
+.BackBtn{
+  color: white; 
+  margin-right: 5px;
+  border: 2px solid;
+  border-radius: 10px;
+}
+.forumBarBtn{
+  font-size: 18px;
+  font-weight: 500;
+  color: white;
+  border: 2px solid;
+  border-radius: 10px;
+  padding-top: 5px;
+}
+.replyBtn{
+  border: 1px solid gray;
+  border-radius: 15px;
+  max-width: 80px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 25px;
+}
+.commentBox{
+  border: 1px solid gray;
+  border-radius: 15px;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 25px;
+  margin:15px 0 0 30px;
+  background-color: floralwhite;
+  padding: 10px;
+}
+.statusMsg{
+  font-size: 14px;
+  color: green;
+}
+.error {
+  color: red;
+  font-size: 14px;
+}
+.row{
+  margin-right: 0px;
+  margin-left:0px;
+}
+.col-4{
+  max-width: 31.333333%;
+}
+.pageTitle{
+  font-weight: bold;
+  color: green;
+  font-size: 18px;
+  margin: 5px 20px;
+}
+.tabLabel{
+    color: green;
+    font-weight: bold;
+    font-size: 22px;
+}
+/* Advertisement Detail Page*/
+.advTitle{
+    color: green;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+
+/*Query List forum Page*/
+
+/*Profile Page */
+.profileTitle{
+  padding: 5px 5px 5px 10px;
+  background-color: darkslategray;
+  color: white;
+  font-weight: bold;
+  width: 100%;
+}
+
+/*Advertisements List Page*/
+.advList{
+    text-align: left;
+    margin: 4px;
+    border: 1px solid darkgrey;
+    padding: 5px;
+    box-shadow: 5px 6px 9px darkgoldenrod;
+    margin-bottom: 10px;
+    background-color: white;
+    font-size: 15px;
+    line-height: 30px;
+}
+.tabNavBar{
+  background: darkolivegreen; 
+  height: 50px;
+}
+.categoryImg{
+  margin-top: 10px;
+  width: 105px;
+}
+.menuImg{
+  margin-top: 10px;
+  width: 120%;
+}
+
+.col{
+  padding-right: 0px ;
+  padding-left: 0px;
+  
+}
+.container {
+    width: 100%;
+    padding-right: 0px;
+    padding-left: 0;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 50px;
+}
+
+.sidenav {
+  height: 100%; /* 100% Full-height */
+  width: 0; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Stay on top */
+  top: 52px; /* Stay at the top */
+  left: 0;
+  background-color: darkslategray; /* Black*/
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 60px; /* Place content 60px from the top */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+
+/* The navigation menu links */
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 20px;
+  color: white;
+  display: block;
+  transition: 0.3s;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main {
+  transition: margin-left .5s;
+  padding: 20px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+#snackbar {  
+    visibility: hidden; 
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 2px;
+    padding: 16px;
+    position: fixed;
+    z-index: 1;
+    top: 95px;
+    height: 179px;
+    font-size: 28px;
+}
+#snackbar.show {
+    visibility: visible;
+    -webkit-animation: fadein 0.5s;
+    animation: fadein 0.5s;
+}

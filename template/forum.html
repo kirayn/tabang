@@ -1,0 +1,13 @@
+
+	<div class="row col-12 forumBar">
+		<div class="forumBarBtn col-12" ng-click="newQuery()">નવો પ્રશ્ન પૂછો</div>
+	</div>
+	<div class="col catColumn" ng-repeat="query in queries">
+		<div class="advList">
+			<div class="advTitle">{{query.qTitle}}</div>
+			<div class="queryDetails">{{query.details}}</div>
+			<div class="usersname"><span><b>પ્રશ્નકર્તા: </b>{{query.firstName}} {{query.lastName}}</span>
+				<span style="float:right;"><b>તારીખ: </b>{{query.date | date:'medium'}}</span></div>
+			<div class="queryBottomBar"><div ng-click="discussQuery(query.queryId)" class="replyBtn">ચર્ચા કરો</div></div>
+		</div>
+	</div>

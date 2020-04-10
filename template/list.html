@@ -1,0 +1,21 @@
+<div class="row col-12 forumBar">
+	<div class="forumBarBtn col-12" ng-click="newAdv()">નવી જાહેરાત મોકલો</div>
+</div>
+<div class="col catColumn" ng-repeat="advert in adverts track by $index">
+	<div class="advList">
+		<span ng-click="getDetails(advert.advId)"><b>{{advert.title}}</b></span><br/>
+		{{advert.description}}<br/>
+		<div ng-if="advert.filename !=null"><img class="listImg" ng-src="media/{{advert.filename}}" ></div>
+		<b>અંદાજીત કિંમત :</b> {{advert.cost}} <br/>
+		<b>સ્થળ : </b> {{advert.ltitle}} <br/>
+		<b>સંપર્ક : </b> {{advert.contactPerson}} 
+		({{advert.contactNumber}}) 
+		<a href="tel:{{advert.contactNumber}}"><img src="img/call-icon.png" height="30px" style="margin-right: 5px;"></a>
+		<a href="//api.whatsapp.com/send?phone=+91{{advert.contactNumber}}&text=Contact from TABELO App"> 	
+		<img height="30px" src="img/whatsapp-icon.png"></a>
+		<div class="row" style="text-align: center; border-top: 1px solid gray">
+			<div class="col-6" style="float: right;"><img height="30px" src="img/like.png" ng-click="addLike($index, advert.advId, 'adv', 'like')"><span ng-bind="advert.likes"></span></div>
+			<div class="col-6" style="float: right;"><img height="30px" src="img/comments.png" ng-click="getDetails(advert.advId)"><span ng-bind="advert.comments"></span></div>
+		</div>
+	</div>
+</div>

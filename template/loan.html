@@ -1,0 +1,66 @@
+<div class="row col">
+<div class="col-sm-10 pageTitle"> લોન મેળવવા વિષે માહિતી માટે આ ફોર્મ ભરો.  </div>
+</div>
+<div class="col"></div>
+<div class="">
+<form name="newadd">
+<div class="col-sm-10 form-group">
+	<label>અરજદારનું નામ </label>
+	<input type="text" name="title" ng-model="title" class="form-control" ng-required="true" placeholder="અરજદારનું નામ " oninvalid="this.setCustomValidity('કૃપા કરી અરજદારનું નામ લખો')"
+ oninput="setCustomValidity('')">
+</div>
+<div class="col-sm-10 form-group">
+	<label>અરજદારની ઉંમર </label>
+	<input type="text" name="title" ng-model="title" class="form-control" ng-required="true" placeholder="અરજદારની ઉંમર" oninvalid="this.setCustomValidity('કૃપા કરી આપનું નામ લખો')"
+ oninput="setCustomValidity('')">
+</div>
+<div class="col-sm-10 form-group">
+	<label>આપની પાસે તબેલો બનાવવા માટે જમીન કેટલી છે.</label>
+	<textarea name="title" ng-model="description" class="form-control" ng-required="true" placeholder="આપની પાસે તબેલો બનાવવા માટે જમીન કેટલી છે. " oninvalid="this.setCustomValidity('કૃપા કરી વિગત લખો')"
+ oninput="setCustomValidity('')"></textarea> 
+</div>
+<div class="col-sm-10 form-group">
+<label>જમીનની માલિકીનો પ્રકાર</label>
+<select class="form-control" ng-required="true" ng-model="categoryId" oninvalid="this.setCustomValidity(' જમીનની માલિકીનો પ્રકાર ')">
+ <option value="1" selected="true">વ્યક્તિગત </option>
+<option value="2">વારસાગત </option>
+<option value="3">ભાડાપેટે  </option>		
+ 	</select>
+ </div>
+<div class="col-sm-10 form-group">
+	<label>શાના માટે લોન જોઈએ છે? </label>
+	<select class="form-control" ng-required="true" ng-model="categoryId" oninvalid="this.setCustomValidity('કૃપા કરી યોગ્ય વિકલ્પ પસંદ કરો ')">
+ <option value="1" selected="true">તબેલો બનાવવા </option>
+<option value="2">તબેલાનો શેડ બનાવવા </option>
+<option value="3">તબેલાના સાધનો ખરીદવા </option>		
+ 	</select>
+</div>
+<div class="col-sm-10 form-group">
+	<label>કયા પશુ માટે તબેલો બનાવવો છે?</label>
+	<input type="text" name="contactPerson" ng-model="contactPerson" ng-required="true" class="form-control" placeholder="કયા પશુ માટે તબેલો બનાવવો છે? ">
+</div>
+<div class="col-sm-10 form-group">
+	<label>કેટલા પશુ માટે તબેલો બનાવવો છે?</label>
+	<input type="text" name="contactPerson" ng-model="contactPerson" ng-required="true" class="form-control" placeholder="કેટલા પશુ માટે તબેલો બનાવવો છે? ">
+</div>
+<div class="col-sm-10 form-group">
+	<label>ગામ-તાલુકો  </label>
+	<input type="text" name="contactPerson" ng-model="contactPerson" ng-required="true" class="form-control" placeholder="ગામ-તાલુકો ">
+</div>
+<div class="col-sm-10 form-group">
+	<label>સંપર્ક માટે નામ </label>
+	<input type="text" name="contactPerson" ng-model="contactPerson" ng-required="true" class="form-control" placeholder="સંપર્ક માટે નામ">
+</div>
+<div class="col-sm-10 form-group">
+	<label>સંપર્ક માટે નંબર</label>
+	<input type="text" name="contactNumber" ng-model="contactNumber" ng-required="true" class="form-control" placeholder="સંપર્ક માટે નંબર">
+</div>
+
+<div class="col-sm-10 form-group">
+	<span ng-bind="status"></span>
+	<div id="waiting" class="waiting hide"></div>
+	<button type="submit" id="insbtn" class="btn btn-default" ng-click="newadd.$valid && insertNewAdv()">મોકલો</button>
+	<button type="submit" id="homebtn" class="btn btn-default hide" ng-click="gotoHome()">હોમપેજ પર જાઓ </button>
+</div>
+</form>
+</div>

@@ -1,0 +1,37 @@
+<div class="container">
+    <div ng-repeat="new in news">
+    	<a href="{{new.link}}">
+    	<img src="media/{{new.fimage}}" width="100%">
+    	<span style="margin: 2px 0 0 6px;">{{new.title}}</span></a>
+    </div>
+	<div class="row" style="">
+		<div class="col-4 catColumn" >
+			<img ng-src="img/pashulevech.jpg" alt="" class="menuImg" ng-click="gotoSection('directory')" />
+		</div>
+		<div class="col-4 catColumn" >
+			<img ng-src="img/medicohelp.jpg" alt="" class="menuImg" ng-click="gotoSection('forum')" />
+		</div>
+		<div class="col-4 catColumn" >
+			<img ng-src="img/khet-pedash.jpg" alt="" class="menuImg" ng-click="getList(9)" />
+		</div>
+		<div class="col-4 catColumn" >
+			<img ng-src="img/khet-ozaro.jpg" alt="" class="menuImg" ng-click="getList(10)" />
+		</div>
+		<div class="col-4 catColumn" >
+			<img ng-src="img/insurance.jpg" alt="" class="menuImg" ng-click="gotoSection('insurance')" />
+		</div>
+		<div class="col-4 catColumn" >
+			<img ng-src="img/govtschemes.jpg" alt="" class="menuImg" ng-click="gotoSection('schemes')" />
+		</div>
+		<div class="col-4 catColumn" >
+			<img ng-src="img/pashuloan.jpg" alt="" class="menuImg" ng-click="gotoSection('loan')" />
+		</div>
+		
+		<div class="col-4 catColumn" >
+			<img ng-src="img/pashuhelp.jpg" alt="" class="menuImg" ng-click="gotoSection('forum')" />
+		</div>
+		<div class="col-4 catColumn" >
+			<img ng-src="img/photo-video.jpg" alt="" class="menuImg" ng-click="gotoSection('gallery')" />
+		</div>
+	</div>
+</div>

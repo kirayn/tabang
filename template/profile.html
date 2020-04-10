@@ -1,0 +1,35 @@
+<div class="col-12">
+<div class="row">
+	<div class="profileTitle"> આપની પ્રોફાઈલ </div>
+</div>
+<form name="profileform" class="form">
+<div class="row" style="margin-top: 15px">
+	<div class="col-sm-10 form-group">
+		<span ng-bind="queryStatus"></span>
+	</div>
+	<div class="col-sm-10 form-group">
+		<input type="text" class="form-control" id="firstname" name="firstname" ng-model="firstname" ng-required="true" placeholder="નામ">
+	</div>
+	<div class="col-sm-10 form-group">
+		<input type="text" class="form-control" id="lastname" name="lastname" ng-model="lastname" ng-required="true" placeholder="અટક">
+	</div>
+	<div class="col-sm-10 form-group">
+		<input type="text" class="form-control" id="address" name="address" ng-model="address" placeholder="સરનામું">
+	</div>
+	<div class="col-sm-10 form-group">
+		<input type="text" class="form-control" id="village" name="village" ng-model="village" placeholder="ગામ">
+	</div>
+	<div class="col-sm-10 form-group">
+		<input type="text" class="form-control" id="city" name="city" ng-model="city" ng-required="true" placeholder="તાલુકો / જીલ્લો">
+	</div>
+	<div class="col-sm-10 form-group">
+		<input type="text" class="form-control" id="pincode" name="pincode" ng-model="pincode" ng-required="true" placeholder="પીનકોડ">
+	</div>
+	<div class="col-sm-10 form-group">
+		<button type="submit" class="btn btn-default" ng-click="profileform.$valid && saveProfile()">પ્રોફાઈલ સાચવો </button> 
+		
+	</div>
+
+</div>
+</form>
+</div>

@@ -1,0 +1,26 @@
+<div class="row col-12 forumBar">
+		<div class="forumBarBtn col-4" ng-click="gotoForum()">બધા પ્રશ્નો</div>	
+</div>
+<div class="row col">
+	<div class="col-sm-10 pageTitle">નવો પ્રશ્ન પૂછવા માટે આ ફોર્મ ભરો</div>
+</div>
+<div class="col"><span class="statusMsg" ng-bind="status"></span></div>
+<div class="">
+<form name="qform">
+<div class="col-sm-10 form-group">
+	<label>કેટેગરી પસંદ કરો </label>
+	<select class="form-control" ng-required="true" ng-model="topicId" ng-options="topic.topicId as topic.title for topic in topics">
+</select>
+</div>
+<div class="col-sm-10 form-group">
+	<input type="text" name="title" ng-model="title" ng-required="true" class="form-control" placeholder="શીર્ષક">
+</div>
+<div class="col-sm-10 form-group">
+	<textarea name="details" ng-model="details" ng-required="true" rows="5" class="form-control" placeholder="વિગત "></textarea> 
+</div>
+
+<div class="col-sm-10 form-group">
+	<button type="submit" class="form-control" ng-click="qform.$valid && insertQuery()">આગળ વધો </button>
+</div>
+</form>
+</div>

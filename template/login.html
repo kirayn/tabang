@@ -1,0 +1,40 @@
+<style>
+.tabNavBar{
+	display: none;
+}
+</style>
+<div class="row">
+	<img src="img/logo-app-landing.png" style="padding-top: 0px; padding-bottom: 0px; margin: auto;">
+</div>
+<div class="row" style="padding: 0px 15px;">
+	<div class="col-lg-12">
+		<form class="form" name="myform">
+
+			<div class="container">	
+				<div class="row justify-content-md-center" style="text-align: center;">
+				    <div class="col-lg-12" style="margin-top: -15px;">
+				    	<div class="form-group">
+						<label class="tabLabel">કૃપયા આપનો મોબાઈલ નંબર દાખલ કરો </label>
+						<input type="hidden" ng-model="chkLoginStat" id="chkloginStat">
+						<input type="text" class="form-control" id="mobile" name="mobile" ng-model="mobile" ng-required="true" ng-minlength="10" ng-maxlength="10" ng-pattern="/^\d{10}$/" placeholder="મોબાઈલ નંબર"> 
+						<span class="error" ng-show="myform.mobile.$dirty && myform.mobile.$invalid">કૃપા કરી 10 અંકોનો મોબાઈલ નંબર દાખલ કરો </span>
+						</div>
+						<button type="submit" class="btn btn-default mx-auto" ng-click="myform.$valid && sendOTP(mobile)" >ઓ.ટી.પી મેળવો </button>
+					</div>
+					<div class="col-lg-12">
+						<input type="hidden" id="genOtp" ng-Model="genOtp"></span>
+					</div>
+					<div class="col-lg-12" style="margin-top: 30px;">
+						<div class="form-group">
+						<label class="tabLabel">આપના મોબાઈલ નંબર પર મેસેજમાં મળેલ OTP અહીં દાખલ કરો.</label>
+						<input type="text" class="form-control" id="supOtp" ng-model="supOtp">
+						</div>
+						<span class="error" ng-bind="optStatus"></span>
+						<button type="submit" class="btn btn-default" ng-click="verifyOTP(supOtp)">આગળ વધો </button>
+
+					</div> 
+					</div>
+			</div>
+		</form>	
+	</div>
+</div>
