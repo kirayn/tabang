@@ -656,7 +656,7 @@
     app.controller('AboutController', function($scope,$location,$http) {
 
       $http.get('app/about.php').then(function(response){
-          //console.log(response.data);
+          
       });
 
           $scope.message = "About Tabelo";
@@ -666,7 +666,7 @@
     app.controller('loanController', function($scope,$location,$http) {
 
       $http.get('app/loan.php').then(function(response){
-          //console.log(response.data);
+          
       });
 
           $scope.message = "How to get Loan for Starting a Tabelo";
